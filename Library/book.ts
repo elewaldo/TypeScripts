@@ -1,16 +1,17 @@
 export { Book };
 import { Author } from "./author.js";
+import { IAuthor, IBook } from "./model.js";
 
-class Book extends Author{
+class Book extends Author implements IBook {
     title: string;
-    author: string;
     isbn: string;
+    Author: IAuthor;
 
-    constructor(title: string, author: string, isbn: string) {
-        super(author);
+    constructor(title: string, author: IAuthor, isbn: string) {
+        super(author.name);
 
         this.title = title;
-        this.author = author;
         this.isbn = isbn;
+        this.Author = author;
     }
 }

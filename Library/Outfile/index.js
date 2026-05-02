@@ -1,4 +1,8 @@
+import { Author } from "./author.js";
 import { Book } from "./book.js";
-let oBook = new Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565");
-console.log(oBook);
+let oAuthor = new Author("John Doe");
+oAuthor.Books.push(new Book("Book 1", oAuthor, "1234567890"));
+oAuthor.Books.forEach(book => {
+    console.log(book.Author);
+});
 //# sourceMappingURL=index.js.map

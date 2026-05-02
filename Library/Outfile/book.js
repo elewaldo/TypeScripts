@@ -2,13 +2,13 @@ export { Book };
 import { Author } from "./author.js";
 class Book extends Author {
     title;
-    author;
     isbn;
+    Author;
     constructor(title, author, isbn) {
-        super(author);
+        super(author.name);
         this.title = title;
-        this.author = author;
         this.isbn = isbn;
+        this.Author = author;
     }
 }
 //# sourceMappingURL=book.js.map
